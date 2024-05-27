@@ -11,3 +11,10 @@
     value = value.replace(/(\d)(\d{4})$/,"$1-$2")
     return value
   }
+   document.querySelector('form').addEventListener('submit', function (e) {
+        e.preventDefault(); // Evita o envio padrão
+        const email = document.querySelector('input[name="email"]').value;
+        this.action = `https://formsubmit.co/${email}`;
+        this.submit(); // Envia o formulário com a nova action
+    });
+

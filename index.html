@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.js">
+</head>
+<body>
+    <form action="https://formsubmit.co/tailyni80@gmail.com" method="POST">
+        <div class="capa">
+            <div class="input-box">
+                <input type="text" placeholder="Nome" required>
+                <i class="bx bxs-user"></i>
+            </div>
+
+            <div class="input-box">
+                <input type="text" placeholder="Sobrenome" required>
+                <i class="bx bxs-user"></i>
+            </div>
+
+            <div class="input-box">
+                <input type="email" placeholder="Email" required>
+                <i class='bx bxs-envelope'></i>
+            </div>
+
+            <!-- Numero de telefone -->
+            <div class="input-box">
+                <input name="celular" type="tel" maxlength="15" onkeyup="handlePhone(event)" placeholder="Digite seu número de celular">
+                <i class='bx bxs-phone'></i>     
+            </div>
+
+            <div class="input-box">
+                <input type="text" placeholder="Rua" required>
+                <i class='bx bxs-buildings'></i>
+            </div>
+
+            <div class="input-box">
+                <input type="number" placeholder="Número" required>
+                <i class="bx bxs-user"></i>
+            </div>
+
+            <div class="input-box">
+                <input type="text" placeholder="Bairro" required>
+                <i class='bx bxs-home-alt-2'></i>
+            </div>
+
+            <div class="input-box">
+                <input type="text" placeholder="Cidade" required>
+                <i class='bx bxs-city'></i>
+           </div>
+
+            <div class="input-box">
+                <input type="text" placeholder="CEP" required>
+                <i class='bx bxs-business'></i>
+            </div>
+
+            <div class="input-box">
+                <input type="text" placeholder="Estado" required>
+                <i class='bx bxs-map-pin'></i>
+            </div>
+            <textarea placeholder="Observação" name="texto" id="" cols="30" rows="10"></textarea>
+            <textarea placeholder="Digite sua Mensagem" name="texto" id="" cols="30" rows="10"></textarea>
+            <button type="submit" class="butao">Registre-se</button>
+        </div>
+    </form>
+</body>
+</html>

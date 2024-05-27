@@ -10,75 +10,64 @@
     <link rel="stylesheet" href="main.js">
 </head>
 <body>
-   <form action="https://formsubmit.co/seu-email@dominio.com" method="POST">
+<body>
+    <form id="registration-form" method="POST">
         <div class="capa">
             <div class="input-box">
                 <input type="text" name="Nome" placeholder="Nome" required>
                 <i class="bx bxs-user"></i>
             </div>
-    
             <div class="input-box">
                 <input type="text" name="Sobrenome" placeholder="Sobrenome" required>
                 <i class="bx bxs-user"></i>
             </div>
-    
             <div class="input-box">
                 <input type="email" name="email" placeholder="Email" required>
                 <i class='bx bxs-envelope'></i>
             </div>
-    
             <div class="input-box">
                 <input name="celular" type="tel" maxlength="15" onkeyup="handlePhone(event)" placeholder="Digite seu número de celular" required>
-                <i class='bx bxs-phone'></i>     
+                <i class='bx bxs-phone'></i>
             </div>
-    
             <div class="input-box">
                 <input type="text" name="Rua" placeholder="Rua" required>
                 <i class='bx bxs-buildings'></i>
             </div>
-    
             <div class="input-box">
                 <input type="number" name="Numero" placeholder="Número" required>
                 <i class="bx bxs-user"></i>
             </div>
-    
             <div class="input-box">
                 <input type="text" name="Bairro" placeholder="Bairro" required>
                 <i class='bx bxs-home-alt-2'></i>
             </div>
-    
             <div class="input-box">
                 <input type="text" name="Cidade" placeholder="Cidade" required>
                 <i class='bx bxs-city'></i>
             </div>
-    
             <div class="input-box">
                 <input type="text" name="CEP" placeholder="CEP" required>
                 <i class='bx bxs-business'></i>
             </div>
-    
             <div class="input-box">
                 <input type="text" name="Estado" placeholder="Estado" required>
                 <i class='bx bxs-map-pin'></i>
             </div>
-    
             <textarea placeholder="Observação" name="Observacao" cols="30" rows="10"></textarea>
             <textarea placeholder="Digite sua Mensagem" name="Mensagem" cols="30" rows="10"></textarea>
-            
-            <!-- Campo oculto para enviar uma cópia ao email do usuário -->
-            <input type="hidden" name="_cc" value="email">
-            
             <button type="submit" class="butao">Registre-se</button>
         </div>
-    </form>    
-    <script>
-    document.querySelector('form').addEventListener('submit', function (e) {
-        e.preventDefault(); // Evita o envio padrão
-        const email = document.querySelector('input[name="email"]').value;
-        this.action = `https://formsubmit.co/${email}`;
-        this.submit(); // Envia o formulário com a nova action
-    });
-</script>
+    </form>
 
+    <script>
+        document.getElementById('registration-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita o envio padrão do formulário
+            const email = document.querySelector('input[name="email"]').value;
+            const form = this;
+            form.action = `https://formsubmit.co/${email}`;
+            form.submit(); // Envia o formulário com a nova ação
+        });
+    </script>
 </body>
 </html>
+

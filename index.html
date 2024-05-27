@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="main.js">
 </head>
 <body>
-    <form action="https://formsubmit.co/your@email.com" method="POST">
+    <form action="https://formsubmit.co/name@email.com" method="POST">
         <div class="capa">
             <div class="input-box">
-                <input type="text" placeholder="Nome" required>
+                <input type="name" placeholder="Nome" name="name" required>
                 <i class="bx bxs-user"></i>
             </div>
 
@@ -29,7 +29,7 @@
 
             <!-- Numero de telefone -->
             <div class="input-box">
-                <input name="celular" type="tel" maxlength="15" onkeyup="handlePhone(event)" placeholder="Digite seu número de celular">
+                <input name="celular" type="tel" maxlength="15" onkeyup="handlePhone(event)" placeholder="Digite seu número de celular" required>
                 <i class='bx bxs-phone'></i>     
             </div>
 
